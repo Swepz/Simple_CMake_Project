@@ -21,3 +21,16 @@ sudo apt-get install build-essential gnome-devel -y
    - Running client terminal 2: ./client.sh
 
 If files are not executable, you need to use command: chmod +x server.sh client.sh
+
+## Project file structure
+Project
+    - bin
+        - client.sh
+        - server.sh
+
+    - source
+        - client.c
+        - server.c
+
+    - include
+       - Dump remaning .c and .h files
