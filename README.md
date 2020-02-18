@@ -23,8 +23,6 @@ sudo apt-get install build-essential gnome-devel -y
 If files are not executable, you need to use command: chmod +x server.sh client.sh
 
 ## Project file structure
-Project
-
     - bin
         - client.sh
         - server.sh
@@ -34,4 +32,4 @@ Project
         - server.c
 
     - include
-       - Dump remaning .c and .h files
+        - Dump remaning .c and .h files
