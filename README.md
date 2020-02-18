@@ -16,8 +16,7 @@ sudo apt-get install build-essential gnome-devel -y
 
 ### Using terminal
 1. Go to bin folder
-2. 
-- Running server: ./server.sh
-- Running client: ./client.sh
+2. - Running server: ./server.sh
+   - Running client: ./client.sh
 
 If files are not executable, you need to use command: chmod +x server.sh client.sh
