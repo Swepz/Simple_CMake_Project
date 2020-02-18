@@ -3,8 +3,8 @@
 ## Install
 sudo apt-get install build-essential gnome-devel -y
 ### Verify installed
-sudo apt-get install libgtk-3-dev -y
-sudo apt-get install libcairo2-dev -y
+- sudo apt-get install libgtk-3-dev -y
+- sudo apt-get install libcairo2-dev -y
 
 ## How to run
 
