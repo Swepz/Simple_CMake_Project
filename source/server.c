@@ -25,45 +25,12 @@ GtkTickCallback on_frame_tick(GtkWidget * widget, GdkFrameClock * frame_clock, g
 
 static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr, gpointer user_data);
 
-void *recieveConnections();
-
-void *recievePlanets();
-
-void* planet_Physics(planet_type* planet);
-
-typedef struct connection_type{
-    int id;
-    mqd_t mqPlanet;
-    mqd_t mqMessage;
-}connection_type;
 
 //Global variables
 GtkWidget *window;
 GtkWidget *darea;
-pthread_t thread_ID;
-mqd_t messageQueue;
-connection_type connections[MAX_CLIENTS];
-planet_type* data;
-pthread_mutex_t dataChange_mutex;
 
 int main(int argc, char *argv[]){
-    for(int i = 0; i < MAX_CLIENTS; i++){
-        connections[i].id = 0;
-    }
-    data = NULL;
-    pthread_mutex_init(&dataChange_mutex,NULL);
-    void *status;
-//  Draw GTK window
-	Graphical_Interface(argc,argv);
-//	create thread for receiving connections
-	pthread_create(&thread_ID, NULL,recieveConnections , NULL);
-//	create thread for receiving planets
-	pthread_create(&thread_ID, NULL, recievePlanets, NULL);
-//	Call gtk_main which handles basic GUI functionality
-	gtk_main();
-//	Let threads finish before exiting
-	pthread_join(thread_ID,&status);
-	printf("Exiting program\n");
 	return 0;
 }
 //Draw event for cairo, will be triggered each time a draw event is executed
@@ -75,7 +42,7 @@ static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr, gpointer user_data
 static void do_drawing(cairo_t *cr){
 //	Set rgb colors for planets
     double rgb_color_x = 0,rgb_color_y= 0,rgb_color_z= 0;
-    pthread_mutex_lock(&dataChange_mutex);
+    /* pthread_mutex_lock(&dataChange_mutex); */
 //    Check if data exists
     if (data != NULL) {
 //    	Check if other other threads want to use database
@@ -117,7 +84,7 @@ static void do_drawing(cairo_t *cr){
 //	        reached end of list
         }
     }
-    pthread_mutex_unlock(&dataChange_mutex);
+    /* pthread_mutex_unlock(&dataChange_mutex); */
 }
 //Draw graphical window
 void Graphical_Interface(int argc, char *argv[]){
@@ -146,18 +113,6 @@ void Graphical_Interface(int argc, char *argv[]){
     gtk_widget_add_tick_callback(darea, on_frame_tick, NULL, 1);
     //GUI stuff, don't touch unless you know what you are doing, or if you talked to me
 //    gtk_main();//Call gtk_main which handles basic GUI functionality
-}
-//Iterate connections and addElement
-void *recievePlanets(){
-    /* Codes goes here */
-}
-//Receive planets from messageQueue
-void *recieveConnections(){
-    /* Code goes here */
-}
-//Handle physics for planets
-void* planet_Physics(planet_type* planet) {
-    /* Code goes here */
 }
 //Tick handler to update the frame
 	GtkTickCallback on_frame_tick(GtkWidget *widget, GdkFrameClock *frame_clock, gpointer user_data) {
