@@ -24,6 +24,7 @@ If files are not executable, you need to use command: chmod +x server.sh client.
 
 ## Project file structure
 Project
+
     - bin
         - client.sh
         - server.sh
