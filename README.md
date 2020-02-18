@@ -15,8 +15,9 @@ sudo apt-get install build-essential gnome-devel -y
 4. Select server first and run, then in the dropdown menu select client and run again.
 
 ### Using terminal
-1. Go to bin folder
-2. - Running server: ./server.sh
-   - Running client: ./client.sh
+1. Open two terminals
+2. Go to project bin folder on both terminals
+3. - Running server terminal 1: ./server.sh
+   - Running client terminal 2: ./client.sh
 
 If files are not executable, you need to use command: chmod +x server.sh client.sh
