@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.00)
-project(Lab3 C)
+project(Planets C)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread -lpthread -lrt")
 include_directories(include)
@@ -24,4 +24,4 @@ add_executable(client source/client.c ${myinclude})
 # Include GTK lib
 target_include_directories(client PUBLIC ${GTK_INCLUDE_DIRS})
 # Target link lib to executable
-target_link_libraries(client rt)
+target_link_libraries(client rt m)

@@ -33,3 +33,6 @@ If files are not executable, you need to use command: chmod +x server.sh client.
 
     - include
         - Dump remaning .c and .h files
+
+
+Author: Emil Persson
