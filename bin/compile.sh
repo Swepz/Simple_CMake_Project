@@ -6,5 +6,4 @@ cd build
 cmake ..
 make
 cd ..
-./build/server
-cd bin/
+./build/main

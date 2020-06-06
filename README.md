@@ -1,38 +1,11 @@
-# Instructions
+# Simple C project structure example
 
-## Install
-sudo apt-get install build-essential gnome-devel -y
-### Verify installed
-- sudo apt-get install libgtk-3-dev -y
-- sudo apt-get install libcairo2-dev -y
+## Instructions
 
-## How to run
+### How to compile & run
+Locate directory bin/
+> ./compile.sh
 
-### Using clion
-1. New CMake Project from sources
-2. Find directory
-3. OPEN EXISTING PROJECT
-4. Select server first and run, then in the dropdown menu select client and run again.
-
-### Using terminal
-1. Open two terminals
-2. Go to project bin folder on both terminals
-3. - Running server terminal 1: ./server.sh
-   - Running client terminal 2: ./client.sh
-
-If files are not executable, you need to use command: chmod +x server.sh client.sh
-
-## Project file structure
-    - bin
-        - client.sh
-        - server.sh
-
-    - source
-        - client.c
-        - server.c
-
-    - include
-        - Dump remaning .c and .h files
-
-
-Author: Emil Persson
+### Add new source files
+1. Add new source files to source/ or test/ directory
+2. When added to directory, edit CMakeLists.txt
