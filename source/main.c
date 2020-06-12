@@ -3,5 +3,6 @@
 #include <math.h>
 
 int main() {
-  printf("Testing -> #include <stdio> from main.h to main.c\n");
+  test_lib("Testing: Library main.h to main.c");
+  printf("%d\n", (int)sqrt(4));
 };
