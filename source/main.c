@@ -1,5 +1,7 @@
 #include "main.h"
 
-int main(){
-    printf("Hello world\n");
+#include <math.h>
+
+int main() {
+  printf("Testing -> #include <stdio> from main.h to main.c\n");
 };
