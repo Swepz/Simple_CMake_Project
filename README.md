@@ -9,11 +9,11 @@ Installation:
 
 Ubuntu
 
-> sudo apt install cmake && gcc
+> sudo apt install cmake gcc
 
 Arch Linux
 
-> sudo pacman -S cmake && gcc
+> sudo pacman -S cmake gcc
 
 Other: [This distro floats my boat](https://cmake.org/download/)
 
