@@ -117,7 +117,7 @@ After
 
 ### Add library files
 
-Directory for library files are located in "include"
+Directory for library files are located in "include" which is a HEADER-ONLY directory
 
 ```bash
 ├── include
@@ -135,34 +135,6 @@ Directory for library files are located in "include"
 │   ├── linked_list.h
 │   └── main.h
 ```
-
-2. Add new file to library
-
-Edit CMakeLists.txt located in root folder.
-
-```bash
-├── bin
-│   ├── main.sh
-│   └── test.sh
-├── CMakeLists.txt <--------------------------- HERE
-├── include
-│   ├── linked_list.h
-│   └── main.h
-└── source
-    ├── CMakeLists.txt
-    ├── main.c
-    └── test.c
-```
-
-3. Include new file "linked_list.h" to library:
-
-Before
-
-> add_library(sharedLibrary STATIC include/main.h)
-
-After 
-
-> add_library(sharedLibrary STATIC include/main.h include/linked_list.h)
 
 #### Note: Math and Pthread has been linked to sharedLibrary by default
 
