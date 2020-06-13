@@ -147,3 +147,10 @@ After
 
 > add_library(sharedLibrary STATIC include/main.h include/linked_list.h)
 
+#### Note: Math and Pthread has been linked to sharedLibrary by default
+
+> target_link_libraries(sharedLibrary PUBLIC m rt)
+
+flag "rt" is used by pthread.h
+
+flag "m" is used by math.h
