@@ -90,12 +90,12 @@ The file binary file "main" comes from source/CMakeLists.txt
 
 > cd source/
 
-> touch example.c
+> touch linked_list.c
 
 ```bash
 └── source
     ├── CMakeLists.txt
-    ├── example.c
+    ├── linked_list.c
     ├── main.c
 ```
 
