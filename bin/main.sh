@@ -1,9 +1,6 @@
 #!/bin/bash
 clear
 cd ..
-mkdir -p build
-cd build
-cmake ..
-make
-cd ..
+cmake -S . -B build
+cmake --build build --config Debug --target main -- -j 6
 ./build/source/main
