@@ -26,9 +26,12 @@ Other: [This distro floats my boat](https://cmake.org/download/)
 ├── CMakeLists.txt
 ├── include
 │   └── main.h
-└── source
+├── README.md
+├── source
+│   ├── CMakeLists.txt
+│   └── main.c
+└── test
     ├── CMakeLists.txt
-    ├── main.c
     └── test.c
 ```
 
@@ -80,10 +83,9 @@ The file binary file "main" comes from source/CMakeLists.txt
 1. Add new source files to "source/" 
 
 ```bash
-└── source
-    ├── CMakeLists.txt
-    ├── main.c
-    └── test.c
+├── source
+│   ├── CMakeLists.txt
+│   └── main.c
 ```
 
 > cd source/
@@ -95,7 +97,6 @@ The file binary file "main" comes from source/CMakeLists.txt
     ├── CMakeLists.txt
     ├── example.c
     ├── main.c
-    └── test.c
 ```
 
 1. Edit source/CMakeLists.txt, add new source file to  a "add_executable"
@@ -110,14 +111,14 @@ After
 
 > add_executable(main 
     main.c
-    example.c
+    linked_list.c
 )
 
 
 
 ### Add library files
 
-Directory for library files are located in "include" which is a HEADER-ONLY directory
+HEADER-ONLY directory for library files are located in "include"
 
 ```bash
 ├── include
