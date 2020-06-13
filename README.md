@@ -136,6 +136,7 @@ Directory for library files are located in "include" which is a HEADER-ONLY dire
 │   └── main.h
 ```
 
+
 #### Note: Math and Pthread has been linked to sharedLibrary by default
 
 > target_link_libraries(sharedLibrary PUBLIC m rt)
