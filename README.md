@@ -1,5 +1,8 @@
 # Simple C project structure example using CMake
 
+Note that this project does not require the user to smash commands in terminal.
+If the user have a IDE that supports CMake, both executables(main,test) should be seperated into two instances to be run by defualt.
+
 ## Project structure
 
 ```bash
@@ -46,7 +49,7 @@ cd build
 cmake ..
 make
 cd ..
-./build/source/main <----------------
+./build/source/main <---------------- Here
 ```
 The file binary file "main" comes from source/CMakeLists.txt
 
