@@ -3,6 +3,20 @@
 Note that this project does not require the user to smash commands in terminal.
 If the user have a IDE that supports CMake, both executables(main,test) will automatically be seperated into two instances by default.
 
+Required packages are CMake(version > 3.0)
+
+Installation:
+
+Ubuntu
+
+> sudo apt install cmake
+
+Arch Linux
+
+> sudo pacman -S cmake
+
+Other: [This distro floats my boat](https://cmake.org/download/)
+
 ## Project structure
 
 ```bash
