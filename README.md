@@ -61,11 +61,8 @@ OR
 # main.sh
 clear
 cd ..
-mkdir -p build
-cd build
-cmake ..
-make
-cd ..
+cmake -S . -B build
+cmake --build build --config Debug --target main
 ./build/source/main <---------------- Here
 ```
 The file binary file "main" comes from source/CMakeLists.txt
