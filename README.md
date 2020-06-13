@@ -111,11 +111,11 @@ Directory for library files are located in "include"
 
 > cd include/
 
-> touch linked_list.c
+> touch linked_list.h
 
 ```bash
 ├── include
-│   ├── linked_list.c
+│   ├── linked_list.h
 │   └── main.h
 ```
 
@@ -129,7 +129,7 @@ Edit CMakeLists.txt located in root folder.
 │   └── test.sh
 ├── CMakeLists.txt <--------------------------- HERE
 ├── include
-│   ├── linked_list.c
+│   ├── linked_list.h
 │   └── main.h
 └── source
     ├── CMakeLists.txt
@@ -137,7 +137,7 @@ Edit CMakeLists.txt located in root folder.
     └── test.c
 ```
 
-3. Include new file "linked_list.c" to library:
+3. Include new file "linked_list.h" to library:
 
 Before
 
@@ -145,5 +145,5 @@ Before
 
 After 
 
-> add_library(sharedLibrary STATIC include/main.h include/linked_list.c)
+> add_library(sharedLibrary STATIC include/main.h include/linked_list.h)
 
