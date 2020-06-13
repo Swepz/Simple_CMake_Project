@@ -8,9 +8,15 @@ add_subdirectory(source)
 add_library(sharedLibrary STATIC 
     include/main.h
 )
+
+find_library(MATH_LIBRARY m)
+target_link_libraries(sharedLibrary PUBLIC ${MATH_LIBRARY})
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads)
+target_link_libraries(sharedLibrary PUBLIC -pthread)
+
 # Add directory "include" to target
 target_include_directories(sharedLibrary PUBLIC include)
-# Link math and pthread library to sharedLibrary
-target_link_libraries(sharedLibrary PUBLIC m rt)
 # Set linker langugage to C
 SET_TARGET_PROPERTIES(sharedLibrary PROPERTIES LINKER_LANGUAGE C)
