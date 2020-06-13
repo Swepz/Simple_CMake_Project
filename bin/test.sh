@@ -6,4 +6,4 @@ cd build
 cmake ..
 make
 cd ..
-./build/source/test
+./build/test/test
