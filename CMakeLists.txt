@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 3.00)
 project(exampleProjectName LANGUAGES C)
 # Split project into seperate cmake files
 add_subdirectory(source)
-add_subdirectory(test)
+
+if(EXISTS "${PROJECT_SOURCE_DIR}/test")
+	add_subdirectory(test)
+endif()
+
 # Create HEADER-ONLY shared library
 add_library(sharedLibrary INTERFACE)
 # Add directory "include" to target library
