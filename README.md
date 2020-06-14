@@ -84,7 +84,7 @@ OR
 
     > chmod +x insertFileName.sh
 
-*Edit the shell scripts to prefered file to execute*
+*Edit shell script for custom target to be launched*
 
 ```bash
 #!/bin/bash 
