@@ -34,6 +34,8 @@ Other: [This distro floats my boat](https://cmake.org/download/)
     ├── CMakeLists.txt
     └── test.c
 ```
+#### Note that "test" directory can be removed without errors.
+
 
 ### How to build, compile & run
 
