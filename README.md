@@ -1,7 +1,7 @@
 # Simple C project structure example using CMake
 
 Note that this project does not require the user to smash commands in terminal.
-If the user have a IDE that supports CMake, both executables(main,test) will automatically be seperated into two instances by default.
+If the user have a IDE that supports CMake, both executables(main,test) should automatically be seperated into two instances by default.
 
 Required packages are CMake(version > 3.0)
 
