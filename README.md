@@ -70,9 +70,10 @@ OR
 # main.sh
 clear
 cd ..
+target=main_target <-------------------- Change here
 cmake -S . -B build
-cmake --build build --config Debug --target main_target
-./build/source/main_target <--------------------------------------------- Here
+cmake --build build --config Debug --target $target
+./build/source/$target
 ```
 The file binary file "main_target" comes from source/CMakeLists.txt
 
