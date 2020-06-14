@@ -71,12 +71,12 @@ OR
 clear
 cd ..
 cmake -S . -B build
-cmake --build build --config Debug --target main
-./build/source/main <--------------------------------------------- Here
+cmake --build build --config Debug --target main_target
+./build/source/main_target <--------------------------------------------- Here
 ```
-The file binary file "main" comes from source/CMakeLists.txt
+The file binary file "main_target" comes from source/CMakeLists.txt
 
-> "add_executable(**main** main.c)"
+> "add_executable(**main_target** main.c)"
 
 
 ### Add new source files
