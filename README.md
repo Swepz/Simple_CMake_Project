@@ -36,8 +36,26 @@ Other: [Select a distro that floats your boat](https://cmake.org/download/)
 ```
 #### Note: The directory "test" is optional.
 
+### How to: Define project name
+1. Locate CMakeLists.txt in root directory
 
-### How to build, compile & run
+```bash
+├── CMakeLists.txt
+```
+2. Change "exampleProjectName" to a suitable name
+
+Example:
+
+```bash
+project(exampleProjectName LANGUAGES C)
+```
+exampleProjectName -> HelloWorld
+
+```bash
+project(HelloWorld LANGUAGES C)
+```
+
+### How to: Build, compile & run
 
 1. Locate shell scripts in directory bin/
 
