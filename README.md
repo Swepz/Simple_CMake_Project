@@ -40,7 +40,11 @@ Other: [Select a distro that floats your boat](https://cmake.org/download/)
 1. Locate CMakeLists.txt in root directory
 
 ```bash
-├── CMakeLists.txt
+bin
+CMakeLists.txt <----------------- Change here
+include
+README.md
+source
 ```
 2. Change "exampleProjectName" to a suitable name
 
