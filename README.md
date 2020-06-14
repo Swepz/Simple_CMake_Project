@@ -55,7 +55,7 @@ Example:
 exampleProjectName -> HelloWorld
 
 
-project(**HelloWorld** LANGUAGES C)
+> project(**HelloWorld** LANGUAGES C)
 
 
 ### How to: Build, compile & run
