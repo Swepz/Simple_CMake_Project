@@ -100,23 +100,6 @@ The file binary file "main" comes from source/CMakeLists.txt
     ├── main.c
 ```
 
-1. Edit source/CMakeLists.txt, add new source file to  a "add_executable"
-
-Before
-
-> add_executable(main 
-    main.c
-)
-
-After
-
-> add_executable(main 
-    main.c
-    **linked_list.c**
-)
-
-
-
 ### Add library files
 
 HEADER-ONLY directory for library files are located in "include"
