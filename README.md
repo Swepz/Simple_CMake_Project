@@ -15,7 +15,7 @@ Arch Linux
 
 > sudo pacman -S cmake
 
-Other: [This distro floats my boat](https://cmake.org/download/)
+Other: [Select a distro that floats your boat](https://cmake.org/download/)
 
 ## Project structure
 
