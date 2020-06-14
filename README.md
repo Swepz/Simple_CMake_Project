@@ -54,6 +54,13 @@ OR
 
 > ./test.sh
 
+
+#### Note that the following *.sh files might not be executable
+
+- If not executable then
+
+    > chmod +x insertFileName.sh
+
 *Edit the shell scripts to prefered file to execute*
 
 ```bash
@@ -69,11 +76,6 @@ The file binary file "main" comes from source/CMakeLists.txt
 
 > "add_executable(**main** main.c)"
 
-#### Note that the following *.sh files might not be executable
-
-- If not executable then
-
-    > chmod +x insertFileName.sh
 
 ### Add new source files
 
