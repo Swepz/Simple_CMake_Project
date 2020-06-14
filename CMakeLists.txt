@@ -5,6 +5,9 @@ add_subdirectory(source)
 
 if(EXISTS "${PROJECT_SOURCE_DIR}/test")
 	add_subdirectory(test)
+	add_library(sourceFiles INTERFACE)
+	# Add directory "source" to target
+	target_include_directories(sourceFiles INTERFACE source)
 endif()
 
 # Create HEADER-ONLY shared library
