@@ -79,50 +79,6 @@ The file binary file "main_target" comes from source/CMakeLists.txt
 
 > "add_executable(**main_target** main.c)"
 
-
-### Add new source files
-
-1. Add new source files to "source/" 
-
-```bash
-├── source
-│   ├── CMakeLists.txt
-│   └── main.c
-```
-
-> cd source/
-
-> touch linked_list.c
-
-```bash
-└── source
-    ├── CMakeLists.txt
-    ├── linked_list.c
-    ├── main.c
-```
-
-### Add library files
-
-HEADER-ONLY directory for library files are located in "include"
-
-```bash
-├── include
-│   └── main.h
-```
-
-1. Create new file
-
-> cd include/
-
-> touch linked_list.h
-
-```bash
-├── include
-│   ├── linked_list.h
-│   └── main.h
-```
-
-
 #### Note: Math and Pthread has been linked to sharedLibrary by default
 
 > target_link_libraries(sharedLibrary PUBLIC m rt)
