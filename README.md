@@ -41,7 +41,7 @@ Other: [Select a distro that floats your boat](https://cmake.org/download/)
 
 ```bash
 bin
-__CMakeLists.txt__ <----------------- Change here
+**CMakeLists.txt** <----------------- Change here
 include
 README.md
 source
@@ -51,12 +51,12 @@ source
 Example:
 
 ```bash
-project(__exampleProjectName__ LANGUAGES C)
+project(**exampleProjectName** LANGUAGES C)
 ```
 exampleProjectName -> HelloWorld
 
 ```bash
-project(__HelloWorld__ LANGUAGES C)
+project(**HelloWorld** LANGUAGES C)
 ```
 
 ### How to: Build, compile & run
