@@ -1,7 +1,6 @@
 #!/bin/bash
 clear
-cd ..
-target=main_target
+target=$1
 cmake -S . -B build
 cmake --build build --config Debug --target $target
-./build/source/$target
+./build/$target
