@@ -24,11 +24,11 @@ Other: [Select a distro that floats your boat](https://cmake.org/download/)
 
 ```bash
 CMakeLists.txt <----------------- Change here
-library
-build
+library/
+build/
 run.sh
 README.md
-source
+source/
 ```
 2. Change "exampleProjectName" to a suitable name
 
@@ -59,9 +59,4 @@ The file binary file "main" comes from source/CMakeLists.txt
 > "add_executable(**main** main.c)"
 
 #### Note: Math and Pthread has been linked to sharedLibrary by default
-
-> target_link_libraries(sharedLibrary PUBLIC m rt)
-
-flag "rt" is used by pthread.h
-
-flag "m" is used by math.h
+> target_link_libraries(sharedLibrary INTERFACE ${MATH} ${PTHREAD})
