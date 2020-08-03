@@ -15,4 +15,4 @@ target_link_libraries(sharedLibrary INTERFACE ${MATH} ${PTHREAD})
 # Create a binary executable
 add_executable(main source/main.c)
 # Link shared library to main
-target_link_libraries(main PUBLIC sharedLibrary)
+target_link_libraries(main PRIVATE sharedLibrary)

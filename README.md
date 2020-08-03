@@ -52,7 +52,7 @@ Example on adding more executables in CMakeLists.txt to be run by adding:
 
 > add_executable(test source/test.c)
 
-> target_link_libraries(test PUBLIC sharedLibrary)
+> target_link_libraries(test PRIVATE sharedLibrary)
 
 #### Note that the run.sh file might not be executable
 
