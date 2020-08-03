@@ -1,7 +1,7 @@
 # Simple C project structure example using CMake
 
 Note that this project does not require the user to smash commands in terminal.
-If the user have a IDE that supports CMake, both executables(main,test) should automatically be seperated into two instances by default.
+If the user have a IDE that supports CMake the executable will be found and added.
 
 Required packages are CMake(version > 3.1)
 
@@ -45,6 +45,13 @@ exampleProjectName -> realProjectName
 ### How to: Build, compile & run
 
 > sh run.sh main
+
+### Add more executables
+
+Example on adding more executables in CMakeLists.txt to be run by adding:
+
+> add_executable(test source/test.c)
+> target_link_libraries(test PUBLIC sharedLibrary)
 
 #### Note that the run.sh file might not be executable
 
