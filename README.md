@@ -9,11 +9,11 @@ Installation:
 
 Ubuntu
 
-> sudo apt install cmake 
+> sudo apt install cmake
 
 Arch Linux
 
-> sudo pacman -S cmake 
+> sudo pacman -S cmake
 
 
 Other: [Select a distro that floats your boat](https://cmake.org/download/)
@@ -24,7 +24,8 @@ Other: [Select a distro that floats your boat](https://cmake.org/download/)
 
 ```bash
 CMakeLists.txt <----------------- Change here
-library/
+include/
+inc/
 build/
 run.sh
 README.md
@@ -44,21 +45,13 @@ exampleProjectName -> realProjectName
 
 ### How to: Build, compile & run
 
-> sh run.sh main
-
-### Add more executables
-
-Example on adding more executables in CMakeLists.txt to be run by adding:
-
-> add_executable(test source/test.c)
-
-> target_link_libraries(test PRIVATE sharedLibrary)
+> sh run main
 
 #### Note that the run.sh file might not be executable
 
 - If not executable then
 
-    > chmod +x run.sh
+    > chmod +x run
 
 *Edit shell script for custom target to be launched*
 
@@ -66,5 +59,5 @@ The file binary file "main" comes from source/CMakeLists.txt
 
 > "add_executable(**main** main.c)"
 
-#### Note: Math and Pthread has been linked to sharedLibrary by default
-> target_link_libraries(sharedLibrary INTERFACE ${MATH} ${PTHREAD})
+#### Note: Math has been linked to target "main" by default
+> target_link_libraries(sharedLibrary INTERFACE ${MATH})
