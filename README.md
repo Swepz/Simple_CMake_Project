@@ -44,7 +44,7 @@ exampleProjectName -> realProjectName
 
 ### How to: Build, compile & run
 
-> sh run.sh main
+> sh run main
 
 ### Add more executables
 
