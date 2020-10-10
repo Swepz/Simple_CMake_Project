@@ -1,5 +1,7 @@
 # Simple C project structure example using CMake
 
+## Note: MinGW must be added to path in windows
+
 Note that this project does not require the user to smash commands in terminal.
 If the user have a IDE that supports CMake the executable will be found and added.
 
