@@ -1,4 +1,6 @@
 #include "main.h"
+#include "linkedList/linkedList.c"
+#include "wrapper/wrapper.c"
 
 int main(){
     printf("Math Working: sqrt(5)=%f\n", sqrt(5));
